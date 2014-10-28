@@ -15,7 +15,7 @@ import org.springframework.context.annotation.ImportResource;
 @ImportResource("classpath:beans.xml")
 public class Sample implements CommandLineRunner {
 
-	@Value("${sample}")
+	@Value("${sample.anno}")
 	private String sample;
 
 	@Autowired
