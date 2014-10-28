@@ -19,12 +19,14 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 @RequestMapping(value="/hello")
+@ResponseBody
 public class HelloWorldController {
 	
-	@Value(value="${sample}")
+	@Value(value="${sample.anno}")
 	private String dummySampleInjected;
 
     @RequestMapping(value = "/test", method = RequestMethod.GET)
